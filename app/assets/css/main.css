@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  /* Paleta base de pastelería en tonos café claro / moca / vainilla */
+  --color-brand-bg: #fbf7f2; /* Fondo crema claro */
+  --color-brand-surface: #f3eae0; /* Superficie café con leche suave */
+
+  --color-brand-coffee: #8c5835; /* Tono café acaramelado tostado */
+  --color-brand-coffee-dark: #4a2c1d; /* Tono café espresso para textos fuertes */
+  --color-brand-coffee-light: #d8bfa8; /* Tono café arena suave */
+  --color-brand-caramel: #b87333; /* Tono caramelo / acento */
+  --color-brand-gold: #c9933e; /* Acento dorado tostado */
+
+  --color-brand-border: rgb(140 88 53 / 0.18);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Tokens semánticos de Nuxt UI adaptados a café claro */
+  --ui-bg: var(--color-brand-bg);
+  --ui-bg-muted: #f4ecdf;
+  --ui-bg-elevated: var(--color-brand-surface);
+  --ui-bg-accented: #ebd8c5;
+
+  --ui-text-dimmed: #8a7c73;
+  --ui-text-muted: #6e5f57;
+  --ui-text-toned: #52423a;
+  --ui-text: #4a2c1d; /* Texto principal café profundo */
+  --ui-text-highlighted: #2f190f;
+  --ui-text-inverted: #fbf7f2;
+
+  --ui-border: var(--color-brand-border);
+  --ui-border-muted: rgb(140 88 53 / 0.08);
+  --ui-border-accented: rgb(140 88 53 / 0.32);
+
+  --ui-primary: var(--color-brand-coffee);
+
+  /* Escala de alerta/error en tonos berry/fresa horneada */
+  --ui-color-error-50: #fdf6f5;
+  --ui-color-error-100: #faeae8;
+  --ui-color-error-200: #f6dad6;
+  --ui-color-error-300: #ecb2ab;
+  --ui-color-error-400: #dd7c71;
+  --ui-color-error-500: #b84337;
+  --ui-color-error-600: #9e342a;
+  --ui-color-error-700: #812820;
+  --ui-color-error-800: #68201a;
+  --ui-color-error-900: #541914;
+  --ui-color-error-950: #330b08;
+}
+
+@utility bg-brand-gradient {
+  background-color: var(--color-brand-bg);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(140 88 53 / 0.08), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgb(184 115 51 / 0.07), transparent 50%),
+    linear-gradient(180deg, #f7efe4 0%, var(--color-brand-bg) 100%);
+}
